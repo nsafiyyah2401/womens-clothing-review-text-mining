@@ -92,59 +92,28 @@ Evaluation metrics:
 - Topic coherence evaluation  
 
 ---
-## 🧹 2. Preprocessing
-- Tokenization  
-- Lowercasing  
-- Stopword removal (NLTK)  
-- Removal of non-alphabetic tokens  
-- Removal of rare and meaningless tokens  
-- Filter words <3 characters  
-- Lexicon-based filtering  
-- Creation of cleaned dataset for vectorization  
 
----
+## 📈 Key Findings
 
-## 🧮 3. Document Representation
-### **TF-IDF (7,052 features)**
-Used for:
-- Classification  
-- Clustering  
+### Classification
+- **LinearSVC** performed best  
+  - *Accuracy:* 0.8963  
+  - *F1:* 0.9382  
+- Naive Bayes had excellent recall but lower precision  
+- KNN produced high recall but slower due to high dimensionality  
 
-### **Bag-of-Words (4,803 features)**
-Used for:
-- Topic Modelling (LDA)  
-- Interpretability of co-occurring words  
+### Clustering
+- K=8 gave the best cluster separation  
+- Themes emerged such as:  
+  - Dresses, sweaters, jeans, sizing issues, summer wear  
 
----
-
-## 🤖 4. Algorithms Used
-### **Classification**
-Models:
-- Naive Bayes  
-- LinearSVC  
-- K-Nearest Neighbours  
-
-Methods:
-- Chi-Square feature selection (top 1,000 features)  
-- Train/test split  
-- Cross-validation  
-- Confusion matrices for error analysis  
-
-### **Clustering (K-Means, K=2 to 9)**
-Evaluation metrics:
-- Davies-Bouldin Score  
-- Purity Score  
-- Homogeneity & Completeness  
-- V-Measure  
-- Adjusted Rand Index  
-
-**Best performance: K = 8**
-
-### **Topic Modelling**
-- LDA (8 topics)
-- BoW matrix
-- Top-word extraction  
-- Topic coherence evaluation
+### Topic Modelling
+Eight coherent topics discovered, including:
+- Fit and fabric issues  
+- Sizing concerns  
+- Summer dresses  
+- Casual wear  
+- Sweaters and comfort  
 
 ---
 
